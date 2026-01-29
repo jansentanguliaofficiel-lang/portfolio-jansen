@@ -1,0 +1,181 @@
+/* Importation de la police (Ex: Poppins ou Orbitron pour le côté Tech) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-blue: #00f3ff; /* Bleu Électrique */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-light: #ffffff;
+    --text-dim: #b3b3b3;
+}
+
+body {
+    background: #0a0a0a; /* Fond très sombre */
+    background-image: radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.1) 0%, transparent 20%);
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+h1, h2, h3, .brand-font {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* --- GLASSMORPHISM --- */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.nav-link {
+    color: var(--text-dim) !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-blue) !important;
+    text-shadow: 0 0 10px var(--primary-blue);
+}
+
+/* --- PROFILE & HERO --- */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-blue);
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+.status-badge {
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blink-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* --- NEON TEXT EFFECTS --- */
+.neon-text {
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.neon-text:hover {
+    color: var(--primary-blue);
+    text-shadow: 0 0 10px var(--primary-blue), 0 0 20px var(--primary-blue);
+    cursor: pointer;
+}
+
+/* --- PROGRESS BARS --- */
+.progress {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: var(--primary-blue);
+    box-shadow: 0 0 10px var(--primary-blue);
+}
+
+/* --- FOOTER --- */
+footer {
+    border-top: 1px solid var(--glass-border);
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-dim);
+}
+
+.social-link {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-link:hover {
+    color: var(--primary-blue);
+    transform: translateY(-3px);
+}
+
+/* Style pour cacher l'email tout en restant cliquable */
+.contact-link-hidden {
+    display: inline-block;
+    max-width: 180px; /* Ajustez selon la taille souhaitée */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ajoute les "..." */
+    vertical-align: middle;
+    transition: max-width 0.5s ease-in-out;
+}
+
+/* Optionnel : Révèle l'adresse complète au survol */
+.contact-link-hidden:hover {
+    max-width: 400px;
+    text-overflow: clip;
+}
+
+/* Style pour le texte de remplacement (plus propre) */
+.contact-label {
+    font-size: 0.9rem;
+    color: var(--primary-blue);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* --- ANIMATIONS DE CHARGEMENT --- */
+
+/* État initial : invisible et légèrement décalé vers le bas */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* État final : visible et à sa place */
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Petit délai pour un effet de cascade sur les listes de cartes */
+.reveal-1 { transition-delay: 0.1s; }
+.reveal-2 { transition-delay: 0.2s; }
+.reveal-3 { transition-delay: 0.3s; }
