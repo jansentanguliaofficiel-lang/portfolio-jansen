@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jansen Batuku</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-light d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-bolt text-info me-2"></i> Monsieur Possible
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="expertise.html">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recherches.html">Recherches</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Mini-Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mt-5 pt-5 mb-5 text-center">
+        <h1 class="display-4 fw-bold text-info brand-font">Travaillons ensemble</h1>
+        <p class="lead text-light opacity-75">Un projet innovant en Énergie ou en IA ? Parlons-en.</p>
+    </header>
+
+    <main class="container mb-5">
+        <div class="row g-5">
+            
+            <div class="col-lg-5">
+                <div class="glass-panel p-4 h-100">
+                    <h2 class="h4 text-info mb-4">Mes Coordonnées</h2>
+                    
+                    <div class="d-flex align-items-center mb-4">
+    <div class="icon-box me-3 text-info">
+        <i class="fa-solid fa-envelope fa-2x"></i>
+    </div>
+    <div>
+        <p class="mb-0 text-muted small">Email professionnel</p>
+        <a href="mailto:jansenbatukutangulia@gmail.com" class="text-light text-decoration-none fw-bold" title="Cliquer pour envoyer un mail">
+            <span class="contact-link-hidden">jansenbatukutangulia@gmail.com</span>
+        </a>
+    </div>
+</div>
+
+<div class="d-flex align-items-center mb-4">
+    <div class="icon-box me-3 text-success">
+        <i class="fa-brands fa-whatsapp fa-2x"></i>
+    </div>
+    <div>
+        <p class="mb-0 text-muted small">WhatsApp Direct</p>
+        <a href="https://wa.me/243838755731" class="text-light text-decoration-none fw-bold">
+            <span class="contact-label">Envoyer un message direct</span>
+        </a>
+    </div>
+</div>
+
+
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="icon-box me-3 text-warning">
+                            <i class="fa-solid fa-location-dot fa-2x"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0 text-muted small">Localisation</p>
+                            <span class="text-light fw-bold">Kisangani, RDC | U.C.Kis</span>
+                        </div>
+                    </div>
+
+                    <hr class="border-secondary my-4">
+
+                    <h2 class="h4 text-info mb-4">Suivez-moi</h2>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="glass-panel p-4">
+                    <h2 class="h4 text-info mb-4">Envoyez un message</h2>
+                    <form action="https://formspree.io/f/VOTRE_ID" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label text-muted small">Nom complet</label>
+                                <input type="text" name="name" class="form-control bg-dark border-secondary text-light shadow-none" placeholder="Ex: Jean Mukendi" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label text-muted small">Adresse Email</label>
+                                <input type="email" name="email" class="form-control bg-dark border-secondary text-light shadow-none" placeholder="nom@exemple.com" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted small">Sujet</label>
+                            <input type="text" name="subject" class="form-control bg-dark border-secondary text-light shadow-none" placeholder="Projet Smart Grid, Collaboration..." required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-muted small">Message</label>
+                            <textarea name="message" class="form-control bg-dark border-secondary text-light shadow-none" rows="5" placeholder="Dites-moi comment je peux vous aider..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info w-100 fw-bold py-2 text-dark">
+                            <i class="fa-solid fa-paper-plane me-2"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p class="small">© 2026 Jansen Batuku Tangulia. Construisons l'avenir de la RDC.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
