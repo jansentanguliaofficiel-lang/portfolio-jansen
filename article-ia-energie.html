@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA & Électrification Rurale - Jansen Batuku</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .code-block {
+            background: #1e1e1e;
+            border-left: 4px solid var(--primary-blue);
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            color: #d4d4d4;
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .keyword { color: #569cd6; }
+        .string { color: #ce9178; }
+        .comment { color: #6a9955; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-light d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-bolt text-info me-2"></i> Monsieur Possible
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="expertise.html">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recherches.html">Recherches</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Mini-Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5 mb-5">
+        
+        <a href="blog.html" class="text-decoration-none text-muted mb-4 d-inline-block hover-effect">
+            <i class="fa-solid fa-arrow-left"></i> Retour au Lab
+        </a>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <header class="glass-panel p-4 p-md-5 mb-4 text-center">
+                    <span class="badge bg-primary mb-3">Intelligence Artificielle & Énergie</span>
+                    <h1 class="display-5 fw-bold neon-text mb-3">Pourquoi l'IA est la clé de l'électrification rurale en RDC</h1>
+                    
+                    <div class="d-flex justify-content-center gap-4 text-muted small">
+                        <span><i class="far fa-calendar"></i> 25 Janvier 2026</span>
+                        <span><i class="far fa-clock"></i> 5 min de lecture</span>
+                        <span><i class="far fa-user"></i> Par Jansen Batuku</span>
+                    </div>
+                </header>
+
+                <article class="glass-panel p-4 p-md-5 text-light opacity-90">
+                    
+                    <p class="lead">
+                        En République Démocratique du Congo, l'extension du réseau national (SNEL) vers les zones rurales est un défi logistique et financier immense. Et si la solution ne résidait pas dans plus de béton, mais dans plus de code ?
+                    </p>
+
+                    <hr class="border-secondary my-4">
+
+                    <h3 class="text-info mt-4 mb-3">1. Le problème des infrastructures classiques</h3>
+                    <p>
+                        Les infrastructures traditionnelles demandent des investissements lourds. Tirer des lignes haute tension à travers la forêt équatoriale pour alimenter des villages isolés n'est souvent pas rentable à court terme. C'est ici que les <strong>Micro-Grids (Micro-réseaux)</strong> entrent en jeu. Mais ces réseaux sont instables : une surcharge soudaine ou un nuage passant devant les panneaux solaires peut faire tomber tout le système.
+                    </p>
+
+                    <h3 class="text-info mt-4 mb-3">2. L'IA comme stabilisateur de réseau</h3>
+                    <p>
+                        C'est là que l'Intelligence Artificielle intervient. En utilisant des algorithmes de <em>Machine Learning</em>, nous pouvons prédire la consommation et la production.
+                    </p>
+                    <ul>
+                        <li><strong>Prédiction de la demande :</strong> Analyser les habitudes du village (éclairage le soir, moulins le matin).</li>
+                        <li><strong>Prédiction météo :</strong> Anticiper la production solaire heure par heure.</li>
+                        <li><strong>Délestage intelligent :</strong> Couper automatiquement les équipements non prioritaires avant que le système ne s'effondre.</li>
+                    </ul>
+
+                    <h4 class="h6 mt-4 text-muted"><i class="fa-solid fa-code"></i> Exemple de logique (Python/TensorFlow) :</h4>
+                    <div class="code-block">
+<span class="comment"># Exemple simplifié de prédiction de charge</span>
+<span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf
+
+<span class="keyword">def</span> <span class="keyword">predict_load</span>(weather_data, current_usage):
+    <span class="comment"># Modèle pré-entraîné sur les données du village</span>
+    model = tf.keras.models.load_model(<span class="string">'microgrid_v1.h5'</span>)
+    
+    prediction = model.predict([weather_data, current_usage])
+    
+    <span class="keyword">if</span> prediction > BATTERY_CAPACITY:
+        <span class="keyword">return</span> <span class="string">"ACTIVATE_BACKUP_GENERATOR"</span>
+    <span class="keyword">else</span>:
+        <span class="keyword">return</span> <span class="string">"OPTIMAL_STATE"</span>
+                    </div>
+
+                    <h3 class="text-info mt-4 mb-3">3. Une vision pour 2030</h3>
+                    <p>
+                        Mon objectif en tant qu'ingénieur est de développer des boîtiers "Plug & Play" équipés de microcontrôleurs (type ESP32 ou Raspberry Pi) capables de gérer ces calculs localement (Edge Computing). Cela permettrait de déployer des réseaux électriques robustes sans attendre l'arrivée des grandes infrastructures.
+                    </p>
+                    
+                    <div class="alert alert-info bg-opacity-10 border-info mt-4">
+                        <strong>💡 Conclusion :</strong> L'avenir de l'énergie en Afrique sera décentralisé, digitalisé et décarboné. L'IA n'est pas un luxe, c'est l'outil qui rendra cette transition possible.
+                    </div>
+
+                </article>
+
+                <div class="glass-panel p-4 mt-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                    <div class="mb-3 mb-md-0">
+                        <h5 class="mb-1">Vous avez aimé cet article ?</h5>
+                        <p class="small text-muted mb-0">Discutons-en sur WhatsApp ou LinkedIn.</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://www.linkedin.com/in/votre-profil" class="btn btn-outline-light btn-sm"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://wa.me/243838755731" class="btn btn-success btn-sm"><i class="fa-brands fa-whatsapp"></i> Discuter</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p class="small">© 2026 Jansen Batuku Tangulia. Kisangani, RDC.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
