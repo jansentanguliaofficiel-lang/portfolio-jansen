@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaziPower : L'Énergie Nomade Intelligente - Jansen Tangulia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .tech-blue { color: #00f3ff; font-weight: bold; }
+        .code-header { background: #2d2d2d; padding: 5px 15px; border-radius: 8px 8px 0 0; color: #aaa; font-size: 0.8rem; border-bottom: 1px solid #444; }
+        .code-block { background: #1e1e1e; padding: 20px; border-radius: 0 0 8px 8px; font-family: 'Fira Code', monospace; font-size: 0.9rem; color: #d4d4d4; overflow-x: auto; margin-bottom: 25px; border: 1px solid #444; }
+        .keyword { color: #569cd6; }
+        .comment { color: #6a9955; }
+        .func { color: #dcdcaa; }
+        .table-glass { background: rgba(255, 255, 255, 0.03); color: white; border-color: rgba(0, 243, 255, 0.2); }
+        .math-box { background: rgba(0, 243, 255, 0.05); border: 1px dashed #00f3ff; padding: 15px; border-radius: 8px; font-style: italic; }
+    </style>
+</head>
+<body>
 
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-light d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-bolt text-info me-2"></i> Monsieur Possible
+            </a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Retour au Lab</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5 mb-5">
+        <a href="blog.html" class="text-decoration-none text-muted mb-4 d-inline-block hover-effect">
+            <i class="fa-solid fa-arrow-left"></i> Retour aux articles
+        </a>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <header class="glass-panel p-4 p-md-5 mb-4 text-center">
+                    <span class="badge bg-info text-dark mb-3">Projet Flagship : KaziPower</span>
+                    <h1 class="display-4 fw-bold neon-text mb-3">L'IA au Service de l'Autonomie Énergétique Nomade</h1>
+                    <p class="lead text-light opacity-75">Fusionner le Génie Électrique et le TinyML pour une station d'énergie auto-optimisée.</p>
+                </header>
+
+                <article class="glass-panel p-4 p-md-5 text-light opacity-90">
+                    
+                    <h2 class="h3 text-info mb-4">Introduction : Pourquoi rendre l'énergie « Intelligente » ?</h2>
+                    <p>
+                        Les stations d'énergie actuelles restent souvent des boîtes « passives » : elles ne prédisent pas leur propre usure et gèrent mal les pics de chaleur. Le projet <span class="tech-blue">KaziPower</span> est né d'une ambition : créer une station capable de s'auto-optimiser, de se sécuriser par biométrie et de prédire les besoins de l'utilisateur.
+                    </p>
+
+                    <h3 class="h4 mt-5 mb-3 text-light border-bottom border-info d-inline-block pb-1">1. Architecture Système</h3>
+                    <p>Le cœur de KaziPower repose sur l'utilisation de cellules <strong>LiFePO4</strong> pour leur stabilité thermique exceptionnelle (>2000 cycles) et un cerveau <strong>ESP32-S3</strong> gérant simultanément les calculs IA et les communications IoT.</p>
+
+                    
+
+                    <h3 class="h4 mt-5 mb-3 text-light border-bottom border-info d-inline-block pb-1">2. Le Cerveau IA : TinyML & LSTM</h3>
+                    <p>
+                        Grâce aux réseaux de neurones récurrents <span class="tech-blue">LSTM</span>, KaziPower estime l'État de Charge (SoC) et l'État de Santé (SoH) avec une précision de 99%, là où les méthodes classiques échouent à cause de la courbe de décharge plate du Lithium.
+                    </p>
+
+                    <h3 class="h4 mt-5 mb-3 text-light border-bottom border-info d-inline-block pb-1">3. Spécifications Techniques</h3>
+                    <div class="table-responsive">
+                        <table class="table table-glass mt-3">
+                            <thead>
+                                <tr><th>Caractéristique</th><th>Spécification</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Capacité</td><td>640Wh (LiFePO4)</td></tr>
+                                <tr><td>Sorties</td><td>AC 230V (Pure Sinus), USB-C PD 65W</td></tr>
+                                <tr><td>Intelligence</td><td>TinyML sur ESP32-S3 (SoC, SoH, Anomalies)</td></tr>
+                                <tr><td>Sécurité</td><td>Empreinte digitale, Geofencing GPS, 4G LTE</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="h4 mt-5 mb-3 text-light border-bottom border-info d-inline-block pb-1">4. Ingénierie Électrique : La Maîtrise de la Conversion</h3>
+                    <p>Pour obtenir une sinusoïde pure de 230V, nous utilisons un onduleur à pont en H (H-Bridge) avec un filtrage <strong>LCL</strong> rigoureux.</p>
+                    
+                    <div class="math-box my-4 text-center">
+                        La fréquence de coupure $f_c$ est calculée pour éliminer les harmoniques de découpage haute fréquence (20 kHz).
+                    </div>
+
+                    <h3 class="h4 mt-5 mb-3 text-light border-bottom border-info d-inline-block pb-1">5. Développement IA : Entraînement du Modèle SoC</h3>
+                    <p>Voici un extrait de la méthodologie en Python pour l'entraînement du modèle SoC-Net :</p>
+
+                    <div class="code-header">kazipower_model.py</div>
+                    <div class="code-block">
+<span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf
+<span class="keyword">from</span> tensorflow.keras.layers <span class="keyword">import</span> LSTM, Dense, Dropout
+
+<span class="comment"># Architecture SoC-Net pour KaziPower</span>
+<span class="keyword">def</span> <span class="func">build_soc_model</span>(input_shape):
+    model = Sequential([
+        <span class="comment"># Capture des dépendances temporelles de la batterie</span>
+        LSTM(<span class="keyword">64</span>, return_sequences=<span class="keyword">True</span>, input_shape=input_shape),
+        Dropout(<span class="keyword">0.2</span>),
+        LSTM(<span class="keyword">32</span>),
+        Dense(<span class="keyword">16</span>, activation=<span class="string">'relu'</span>),
+        <span class="comment"># Sortie : Pourcentage du SoC (0.0 à 1.0)</span>
+        Dense(<span class="keyword">1</span>, activation=<span class="string">'linear'</span>)
+    ])
+    <span class="keyword">return</span> model
+                    </div>
+
+                    <h3 class="h4 mt-5 mb-3 text-light border-bottom border-info d-inline-block pb-1">Conclusion</h3>
+                    <p>
+                        KaziPower représente l’équilibre parfait entre la physique du solide, l’électronique de puissance et l’informatique cognitive. Ce projet démontre ma capacité à gérer un cycle de vie de produit complet : de la conception du PCB à l’optimisation d’un réseau de neurones.
+                    </p>
+
+                    <div class="alert alert-info bg-opacity-10 border-info mt-5 text-center">
+                        <strong>KaziPower : L'énergie de demain, dès aujourd'hui.</strong>
+                    </div>
+
+                </article>
+
+                <div class="glass-panel p-4 mt-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Intéressé par cette technologie ?</h5>
+                        <p class="small text-muted mb-0">Échangeons sur les applications du TinyML dans l'énergie.</p>
+                    </div>
+                    <div class="d-flex gap-2 mt-3 mt-md-0">
+                        <a href="https://wa.me/243838755731" class="btn btn-success"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                        <a href="contact.html" class="btn btn-outline-info">Me contacter</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 border-top border-secondary opacity-50">
+        <p class="small">© 2026 Jansen Tangulia. Monsieur Possible.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
